@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "IP Location Finder",
+    "version": "1.0",
+    "description": "Get the exact location of an IP address.",
+    "permissions": [
+      "activeTab",
+      "http://localhost/*"
+    ],
+    "icons": {
+      "48": "icon.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "48": "icon.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["popup.js"]
+      }
+    ]
+  }
+  
